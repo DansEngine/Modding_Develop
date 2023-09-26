@@ -5,7 +5,7 @@ float xBG, yBG, WBG, HBG;
 String Button="QUIT";
 PFont ButtonFont;
 int ButtonSize, size;
-color red=#FC0000;
+color red=#FC0000, white=#FFFFFF;
 
 void setup() {
   // Print
@@ -28,9 +28,13 @@ void draw() {
   //TExt
   //
   fill(white);
+  textAlign(CENTER,CENTER);
   size=60;
   text(Button, xBG, yBG, WBG, HBG);
+  textFont (ButtonFont, size);
 } //End draw
 void mousePressed() {
-  
+  //
+  if (mouseX>xBG && mouseX<xBG + WBG && mouseY>yBG && mouseY<yBG + HBG) exit();
+  //
 } //END
