@@ -14,10 +14,10 @@ void setup() {
   fullScreen ();
   WR = width;
   HR = height;
-  xBG = WR*1/16 ;
-  yBG = HR*1/16 ;
-  WBG = WR*1/8 ;
-  HBG = HR*1/10 ;
+  xBG = WR*1/32 ;
+  yBG = HR*1/32 ;
+  WBG = WR*1/12 ;
+  HBG = HR*1/16 ;
   String[] fontList = PFont.list (); 
   ButtonFont = createFont ("CalifornianFB-Bold",48);
 } //End setup
@@ -29,7 +29,7 @@ void draw() {
   //
   fill(white);
   textAlign(CENTER,CENTER);
-  size=60;
+  size=40;
   text(Button, xBG, yBG, WBG, HBG);
   textFont (ButtonFont, size);
 } //End draw
